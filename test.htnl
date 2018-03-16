@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>Product Feedback</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css" >
+		<script src="jquery/jqurey.js"></script>
+		<script src="bootstrap/bootstrap.min.js"></script>
+	</head>
+	<style>
+		form{
+			margin:10% 25% 0 25%;
+			
+		}
+		.inputs{
+			padding:3px;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$("#register").css("display","none");
+			$("#resbtn").click(function(){
+				$("#register").css("display","block");
+				$("#login").css("display","none");
+			})
+			$("#logbtn").click(function(){
+				console.log("gdhf");
+				$("#register").css("display","none");
+				$("#login").css("display","block");
+			})
+		})
+	</script>
+	<body>
+	<div id="login" >
+	<form action="userlogin.php" method="POST">
+			<h3>User Login </h3>
+			<div class="inputs">
+			<label for="usn">Username :</label>
+			<input type="text" width="30%" id ="usn" name="username">
+			</div>
+			<div class="inputs">
+			<label for="pass">Password :</label>
+			<input type="password" width="30%" id ="pass" name="pswd">
+			</div>
+			
+			<input class="btn" type="submit" name="submit" value="Login">
+			<a  id="resbtn">register</a>
+	</form>
+	</div>
+	<div id="register" >
+	<form action="userlogin.php" method="POST">
+			<h3>User Registration </h3>
+			<div class="inputs">
+			<label for="us">Email :</label>
+			<input type="email" width="30%" id ="us" name="email">
+			</div>
+			<div class="inputs">
+			<label for="usn">Username :</label>
+			<input type="text" width="30%" id ="usn" name="Rusername">
+			</div>
+			<div class="inputs">
+			<label for="pass">Password :</label>
+			<input type="password" width="30%" id ="pass" name="Rpswd">
+			</div>
+			
+			<input class="btn" type="submit" name="submit" value="Register">
+			<a  id = "logbtn">Login</a>
+	</form>
+	</div>
+	</body>
+</html>
